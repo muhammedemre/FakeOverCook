@@ -2,6 +2,8 @@
 {
     public static MenuManager instance;
 
+    public MenuActor MenuActor;
+
     private void Awake()
     {
         StaticCheck();
@@ -14,5 +16,11 @@
             Destroy(this);
         }
         instance = this;
+    }
+
+    public override void MenuProcess()
+    {
+        GameManager.instance.currentGameState = GameStates.Menu;
+        MenuActor.MenuPrepare();
     }
 }

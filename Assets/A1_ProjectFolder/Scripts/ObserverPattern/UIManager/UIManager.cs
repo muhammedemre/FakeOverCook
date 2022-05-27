@@ -1,7 +1,11 @@
-﻿public class UIManager : Manager
+﻿using System;
+using UnityEngine;
+
+public class UIManager : Manager
 {
     public static UIManager instance;
     public UITaskOfficers UITaskOfficers;
+    [SerializeField] private GameObject menu;
     private void Awake()
     {
         StaticCheck();
@@ -14,5 +18,11 @@
             Destroy(this);
         }
         instance = this;
+    }
+
+    public override void GameStartProcess()
+    {
+        menu.gameObject.SetActive(true);
+        GameManager.instance.gameManagerObserverOfficer.Publish(ObserverSubjects.Menu);
     }
 }

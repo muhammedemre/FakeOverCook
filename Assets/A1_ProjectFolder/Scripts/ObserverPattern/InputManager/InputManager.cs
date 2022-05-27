@@ -1,6 +1,7 @@
 ﻿public class InputManager : Manager
 {
     public static InputManager instance;
+    public GetInputOfficer GetInputOfficer;
 
     private void Awake()
     {

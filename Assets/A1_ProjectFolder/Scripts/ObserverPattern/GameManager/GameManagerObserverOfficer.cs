@@ -15,6 +15,13 @@ public class GameManagerObserverOfficer : SerializedMonoBehaviour
         {
             observerSubjectDict.Add(subject, new ObserverSubject(subject));
         }
+        // print("SUBJECTS CREATED");
+    }
+    
+    public void Publish(ObserverSubjects notificationType)
+    {
+        // print("PUBLISHING : "+ notificationType);
+        observerSubjectDict[notificationType].NotifyObservers();
     }
     
     #region Button

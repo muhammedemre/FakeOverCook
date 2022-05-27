@@ -15,11 +15,11 @@ public class DataManager : Manager
         }
         instance = this;
     }
-    
-    
+
     public override void PreGameStartProcess()
     {
         // base.StartProcess();
-        print("OVERRIDED PreGameSTART PROCESS");
+        // print("Data is loaded");
+        GameManager.instance.gameManagerObserverOfficer.Publish(ObserverSubjects.GameStart);
     }
 }
