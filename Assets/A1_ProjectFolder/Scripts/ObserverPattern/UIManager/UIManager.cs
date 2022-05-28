@@ -5,7 +5,7 @@ public class UIManager : Manager
 {
     public static UIManager instance;
     public UITaskOfficers UITaskOfficers;
-    [SerializeField] private GameObject menu;
+    public GameObject menu;
     private void Awake()
     {
         StaticCheck();

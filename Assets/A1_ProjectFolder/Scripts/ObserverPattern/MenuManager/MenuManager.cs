@@ -21,6 +21,6 @@
     public override void MenuProcess()
     {
         GameManager.instance.currentGameState = GameStates.Menu;
-        MenuActor.MenuPrepare();
+        MenuActor.MenuPreparetion();
     }
 }

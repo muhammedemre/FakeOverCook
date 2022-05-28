@@ -12,11 +12,11 @@ public class GetInputOfficer : MonoBehaviour
 
     void GetInput()
     {
-        if (GameManager.instance.currentGameState == GameStates.Menu)
+        if (GameManager.instance.currentGameState == GameStates.Menu && !InputManager.instance.noInputTime)
         {
             MenuInput();
         }
-        else if (GameManager.instance.currentGameState == GameStates.InGame)
+        else if (GameManager.instance.currentGameState == GameStates.InGame && !InputManager.instance.noInputTime)
         {
             InGameInput();
         }

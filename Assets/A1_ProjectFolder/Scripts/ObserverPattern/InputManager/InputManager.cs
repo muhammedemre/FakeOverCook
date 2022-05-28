@@ -3,6 +3,8 @@
     public static InputManager instance;
     public GetInputOfficer GetInputOfficer;
 
+    public bool noInputTime = false;
+
     private void Awake()
     {
         StaticCheck();
