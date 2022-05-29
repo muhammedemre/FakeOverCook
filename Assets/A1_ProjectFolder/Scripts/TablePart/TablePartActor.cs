@@ -7,7 +7,7 @@ public class TablePartActor : MonoBehaviour
 {
     public enum TablePartEnum
     {
-        NormalTable, PlateSpawner, Garbage, ServiceTable, ChoppingBoard
+        NormalTable, PlateSpawner, Garbage, ServiceTable, ChoppingBoard, ResourceBox
     }
 
     [SerializeField] private ModelOfficerTransformBased categoryModelsOfficer;

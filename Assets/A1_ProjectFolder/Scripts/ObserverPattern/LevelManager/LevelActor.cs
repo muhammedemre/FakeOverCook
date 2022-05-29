@@ -6,9 +6,7 @@ using UnityEngine;
 public class LevelActor : MonoBehaviour
 {
     public LevelPreperationOfficer LevelPreperationOfficer;
+    public TableActor TableActor;
 
-    private void Start()
-    {
-        
-    }
+    
 }
