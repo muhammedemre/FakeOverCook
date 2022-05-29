@@ -26,4 +26,9 @@
     {
         LevelCreateOfficer.CreateTheLevel();
     }
+
+    public override void PostLevelInstantiateProcess()
+    {
+        GameManager.instance.currentGameState = GameStates.InGame;
+    }
 }

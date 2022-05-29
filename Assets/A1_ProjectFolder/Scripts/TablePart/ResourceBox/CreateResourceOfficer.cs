@@ -8,5 +8,5 @@ public class CreateResourceOfficer : MonoBehaviour
     public void CreateTheResource(GameObject vegetablePrefab, VegetableTypeEnums vegetableType)
     {
         // Transform tempResource = Instantiate(vegetablePrefab, )
-    }
+    // }
 }

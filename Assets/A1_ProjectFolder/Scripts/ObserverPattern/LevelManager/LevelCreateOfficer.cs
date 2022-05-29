@@ -13,7 +13,10 @@ public class LevelCreateOfficer : MonoBehaviour
         StartCoroutine(menuToIngameSceneTransition.GetComponent<MenuToInGameSceneTransitionActor>().TransitionStart(transitionDuration));
         yield return new WaitForSeconds(transitionDuration/4);
         GameManager.instance.gameManagerObserverOfficer.Publish(ObserverSubjects.LevelInstantiate);
-        UIManager.instance.menu.gameObject.SetActive(false);
+        // yield return new WaitForSeconds((transitionDuration/4)*3);
+        // UIManager.instance.menu.gameObject.SetActive(false);
+        // GameManager.instance.gameManagerObserverOfficer.Publish(ObserverSubjects.PostLevelInstantiate);
+        
     }
 
     public void CreateTheLevel()

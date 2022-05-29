@@ -7,7 +7,19 @@ public class GetInputOfficer : MonoBehaviour
 {
     private void Update()
     {
-        GetInput();
+        if (GameManager.instance.currentGameState == GameStates.Menu && !InputManager.instance.noInputTime)
+        {
+            MenuInput();
+        }
+        // GetInput();
+    }
+
+    private void FixedUpdate()
+    {
+        if (GameManager.instance.currentGameState == GameStates.InGame && !InputManager.instance.noInputTime)
+        {
+            InGameInput();
+        }
     }
 
     void GetInput()
@@ -85,6 +97,25 @@ public class GetInputOfficer : MonoBehaviour
 
     void InGameInput()
     {
+        Player1InGameInput();
+        Player2InGameInput();
+    }
+
+    void Player1InGameInput()
+    {
+        HumanActor player1Actor = LevelManager.instance.LevelCreateOfficer.currentLevel.GetComponent<LevelActor>()
+            .player1Actor;
         
+        player1Actor.HumanInputHandleOfficer.MenuInputInjection(Input.GetKey(KeyCode.W),
+            Input.GetKey(KeyCode.S), Input.GetKey(KeyCode.A), Input.GetKey(KeyCode.D),
+            Input.GetKeyDown(KeyCode.C));
+    }
+    void Player2InGameInput()
+    {
+        HumanActor player2Actor = LevelManager.instance.LevelCreateOfficer.currentLevel.GetComponent<LevelActor>()
+            .player2Actor;
+        player2Actor.HumanInputHandleOfficer.MenuInputInjection(Input.GetKey(KeyCode.UpArrow),
+            Input.GetKey(KeyCode.DownArrow), Input.GetKey(KeyCode.LeftArrow), Input.GetKey(KeyCode.RightArrow),
+            Input.GetKeyDown(KeyCode.L));
     }
 }

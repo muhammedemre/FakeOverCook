@@ -10,6 +10,9 @@ public class MenuToInGameSceneTransitionActor : MonoBehaviour
     {
         animator.SetInteger("State", 1);
         yield return new WaitForSeconds(transitionDuration);
+        UIManager.instance.menu.gameObject.SetActive(false);
         animator.SetInteger("State", 2);
+        yield return new WaitForSeconds(1.5f);
+        GameManager.instance.gameManagerObserverOfficer.Publish(ObserverSubjects.PostLevelInstantiate);
     }
 }

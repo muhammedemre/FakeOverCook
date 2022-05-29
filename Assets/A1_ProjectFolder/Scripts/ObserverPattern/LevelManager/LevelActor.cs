@@ -7,6 +7,7 @@ public class LevelActor : MonoBehaviour
 {
     public LevelPreperationOfficer LevelPreperationOfficer;
     public TableActor TableActor;
+    public HumanActor player1Actor, player2Actor;
 
-    
+
 }
