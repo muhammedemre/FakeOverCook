@@ -11,9 +11,10 @@ public class TablePartActor : MonoBehaviour
     }
 
     [SerializeField] private ModelOfficerTransformBased categoryModelsOfficer;
-
+    public TablePartEnum currentTablePartType;
     void ChooseTypeOfTablePart(TablePartEnum selectedTablePartType)
     {
+        currentTablePartType = selectedTablePartType;
         categoryModelsOfficer.SelectTheModel((int)selectedTablePartType);
     }
 
