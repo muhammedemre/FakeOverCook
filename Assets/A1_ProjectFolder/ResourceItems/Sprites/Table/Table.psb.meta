@@ -1,0 +1,813 @@
+fileFormatVersion: 2
+guid: 3ad297d299bc9a5438f45f70698a10c7
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: PotShadow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1765
+      y: 4
+      width: 68
+      height: 68
+    spriteID: 80d6a887358fc574e9806d20aad5cdc8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1176, y: -821}
+  - name: Pot
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1585
+      y: 769
+      width: 76
+      height: 76
+    spriteID: 4a85037d46cd3c94da1595a302b43789
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1000, y: -52}
+  - name: Lettuce
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1703
+      y: 361
+      width: 48
+      height: 76
+    spriteID: 42e9b424a5804f24c81054665672d5fd
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1093, y: -457}
+  - name: Tomato
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1690
+      y: 585
+      width: 66
+      height: 68
+    spriteID: a13b62f89c7436746820bd680b80c3f5
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1090, y: -240}
+  - name: RedPepper
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1765
+      y: 80
+      width: 68
+      height: 59
+    spriteID: 9ee9300275355a747bf7848f4884259a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1166, y: -755}
+  - name: Cabbage
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1765
+      y: 226
+      width: 62
+      height: 62
+    spriteID: aca4003cc826f74438ee481a46c40c69
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1165, y: -597}
+  - name: Cucumber
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1765
+      y: 147
+      width: 55
+      height: 71
+    spriteID: 65a3c71b68ba57447b692270f456df1b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1159, y: -673}
+  - name: Carrot
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1765
+      y: 515
+      width: 29
+      height: 82
+    spriteID: f210f55f36d2a45459fbed4e281ad8ca
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1147, y: -302}
+  - name: GreenOnion
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1713
+      y: 479
+      width: 40
+      height: 79
+    spriteID: e09fdabe41151c649a7ca2e9256129e8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1101, y: -339}
+  - name: Radish
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1703
+      y: 243
+      width: 51
+      height: 77
+    spriteID: 48213985840bc044b93c9b7564d66f07
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1098, y: -578}
+  - name: RedCabbage
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1765
+      y: 296
+      width: 59
+      height: 58
+    spriteID: 68ac3e91a9505f64aaec45cf96db040c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1161, y: -534}
+  - name: Corn
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1706
+      y: 122
+      width: 46
+      height: 70
+    spriteID: 50821ec3e2fcb8b4fa9d8bd10c57607c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1096, y: -702}
+  - name: WoodenBox
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1585
+      y: 479
+      width: 120
+      height: 98
+    spriteID: ee2e37a7bed107543be8d6ee7f724de0
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1022, y: -331}
+  - name: GarbageCapShadow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1585
+      y: 122
+      width: 113
+      height: 113
+    spriteID: 127efc3e2c1cce64aa9274f772bf47c3
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 989, y: -682}
+  - name: GarbageCap
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1585
+      y: 243
+      width: 110
+      height: 110
+    spriteID: 0bc7eb467f9b64547b888fc5bf784a25
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 988, y: -563}
+  - name: GarbageBodyShadow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1585
+      y: 585
+      width: 97
+      height: 97
+    spriteID: 2896400243c0eb54abf056173c088ad5
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1010, y: -225}
+  - name: GarbageBody
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1585
+      y: 361
+      width: 110
+      height: 110
+    spriteID: 98749e8764a24ff46b854737a33825ac
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1017, y: -443}
+  - name: PlateShadow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1765
+      y: 456
+      width: 51
+      height: 51
+    spriteID: 4bb62b1f587123d4f8429deda613dc67
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1167, y: -377}
+  - name: Plate
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1669
+      y: 769
+      width: 76
+      height: 76
+    spriteID: c3603cb633c1cf941a70e4a076cb75a1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1084, y: -52}
+  - name: Knife
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1765
+      y: 362
+      width: 33
+      height: 86
+    spriteID: 41def5e66adf21d4a82ab386fbbb8a23
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1126, y: -454}
+  - name: ChoppingBoard
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1585
+      y: 690
+      width: 125
+      height: 71
+    spriteID: c9e857ada7d0599418918dca9419fc09
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1025, y: -127}
+  - name: TablePart
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1585
+      y: 4
+      width: 172
+      height: 110
+    spriteID: c2a9e7f8cc85b1b4fa86edc631ea00f6
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1048, y: -800}
+  - name: TableBody
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1573
+      height: 870
+    spriteID: 63c590eb973babf4c84bc180b8cbb80e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -170, y: -48}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 1920, y: 1080}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 2048
+  textureActualHeight: 2048
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Pot
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 37
+    mosaicPosition: {x: 0, y: 0}
+  - name: PotShadow
+    spriteName: PotShadow
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 80d6a887358fc574e9806d20aad5cdc8
+    layerID: 36
+    mosaicPosition: {x: 1765, y: 4}
+  - name: Pot
+    spriteName: Pot
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 4a85037d46cd3c94da1595a302b43789
+    layerID: 35
+    mosaicPosition: {x: 1585, y: 769}
+  - name: Vegetables
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 84
+    mosaicPosition: {x: 0, y: 0}
+  - name: Lettuce
+    spriteName: Lettuce
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 42e9b424a5804f24c81054665672d5fd
+    layerID: 94
+    mosaicPosition: {x: 1703, y: 361}
+  - name: Tomato
+    spriteName: Tomato
+    isGroup: 0
+    parentIndex: 3
+    spriteID: a13b62f89c7436746820bd680b80c3f5
+    layerID: 93
+    mosaicPosition: {x: 1690, y: 585}
+  - name: RedPepper
+    spriteName: RedPepper
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 9ee9300275355a747bf7848f4884259a
+    layerID: 92
+    mosaicPosition: {x: 1765, y: 80}
+  - name: Cabbage
+    spriteName: Cabbage
+    isGroup: 0
+    parentIndex: 3
+    spriteID: aca4003cc826f74438ee481a46c40c69
+    layerID: 91
+    mosaicPosition: {x: 1765, y: 226}
+  - name: Cucumber
+    spriteName: Cucumber
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 65a3c71b68ba57447b692270f456df1b
+    layerID: 90
+    mosaicPosition: {x: 1765, y: 147}
+  - name: Carrot
+    spriteName: Carrot
+    isGroup: 0
+    parentIndex: 3
+    spriteID: f210f55f36d2a45459fbed4e281ad8ca
+    layerID: 89
+    mosaicPosition: {x: 1765, y: 515}
+  - name: GreenOnion
+    spriteName: GreenOnion
+    isGroup: 0
+    parentIndex: 3
+    spriteID: e09fdabe41151c649a7ca2e9256129e8
+    layerID: 88
+    mosaicPosition: {x: 1713, y: 479}
+  - name: Radish
+    spriteName: Radish
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 48213985840bc044b93c9b7564d66f07
+    layerID: 87
+    mosaicPosition: {x: 1703, y: 243}
+  - name: RedCabbage
+    spriteName: RedCabbage
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 68ac3e91a9505f64aaec45cf96db040c
+    layerID: 86
+    mosaicPosition: {x: 1765, y: 296}
+  - name: Corn
+    spriteName: Corn
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 50821ec3e2fcb8b4fa9d8bd10c57607c
+    layerID: 83
+    mosaicPosition: {x: 1706, y: 122}
+  - name: WoodenBox
+    spriteName: WoodenBox
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ee2e37a7bed107543be8d6ee7f724de0
+    layerID: 82
+    mosaicPosition: {x: 1585, y: 479}
+  - name: Garbage
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 43
+    mosaicPosition: {x: 0, y: 0}
+  - name: GarbageCapShadow
+    spriteName: GarbageCapShadow
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 127efc3e2c1cce64aa9274f772bf47c3
+    layerID: 71
+    mosaicPosition: {x: 1585, y: 122}
+  - name: GarbageCap
+    spriteName: GarbageCap
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 0bc7eb467f9b64547b888fc5bf784a25
+    layerID: 44
+    mosaicPosition: {x: 1585, y: 243}
+  - name: GarbageBodyShadow
+    spriteName: GarbageBodyShadow
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 2896400243c0eb54abf056173c088ad5
+    layerID: 42
+    mosaicPosition: {x: 1585, y: 585}
+  - name: GarbageBody
+    spriteName: GarbageBody
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 98749e8764a24ff46b854737a33825ac
+    layerID: 41
+    mosaicPosition: {x: 1585, y: 361}
+  - name: Plate
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 27
+    mosaicPosition: {x: 0, y: 0}
+  - name: PlateShadow
+    spriteName: PlateShadow
+    isGroup: 0
+    parentIndex: 20
+    spriteID: 4bb62b1f587123d4f8429deda613dc67
+    layerID: 29
+    mosaicPosition: {x: 1765, y: 456}
+  - name: Plate
+    spriteName: Plate
+    isGroup: 0
+    parentIndex: 20
+    spriteID: c3603cb633c1cf941a70e4a076cb75a1
+    layerID: 26
+    mosaicPosition: {x: 1669, y: 769}
+  - name: Knife
+    spriteName: Knife
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 41def5e66adf21d4a82ab386fbbb8a23
+    layerID: 39
+    mosaicPosition: {x: 1765, y: 362}
+  - name: ChoppingBoard
+    spriteName: ChoppingBoard
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c9e857ada7d0599418918dca9419fc09
+    layerID: 38
+    mosaicPosition: {x: 1585, y: 690}
+  - name: TablePart
+    spriteName: TablePart
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c2a9e7f8cc85b1b4fa86edc631ea00f6
+    layerID: 25
+    mosaicPosition: {x: 1585, y: 4}
+  - name: TableBody
+    spriteName: TableBody
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 63c590eb973babf4c84bc180b8cbb80e
+    layerID: 24
+    mosaicPosition: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: Table Texture
+  prefabAssetName: Table Prefab
+  spriteLibAssetName: Table Sprite Lib
+  secondarySpriteTextures: []
