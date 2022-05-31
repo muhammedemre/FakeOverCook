@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class NormalTableActor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private TablePartActor tablePartActor;
+    public void AssignTheFunctionality()
     {
-        
+        tablePartActor.TableFunction += NormalTableInteractionProcess;
     }
 
-    // Update is called once per frame
-    void Update()
+    void NormalTableInteractionProcess(HumanActor humanActor)
     {
-        
+        print("NormalTableInteractionProcess");
     }
 }

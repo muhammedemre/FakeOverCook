@@ -13,6 +13,7 @@ public class HumanResourceInteractionOfficer : MonoBehaviour
         resourceList.Add(resource);
 
         resource.SetParent((carryPoint1.childCount == 0)? carryPoint1 : carryPoint2);
+        resource.localPosition = Vector3.zero;
         
         HumanActor.HumanAnimationOfficer.PlayHoldItem();
         yield return new WaitForSeconds(0.2f);

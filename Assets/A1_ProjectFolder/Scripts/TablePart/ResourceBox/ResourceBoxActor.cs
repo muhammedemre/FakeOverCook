@@ -10,6 +10,20 @@ public class ResourceBoxActor : MonoBehaviour
     
     [SerializeField] private GameObject vegetablePrefab;
     public VegetableTypeEnums selectedResourceType;
+    
+    [SerializeField] private TablePartActor tablePartActor;
+    public void AssignTheFunctionality()
+    {
+        tablePartActor.TableFunction += ResourceBoxTableInteractionProcess;
+    }
+
+    void ResourceBoxTableInteractionProcess(HumanActor humanActor)
+    {
+        print("ResourceBoxTableInteractionProcess");
+        CreateResourceOfficer.CreateTheResource(vegetablePrefab, selectedResourceType, humanActor);
+    }
+    
+    #region SettingTypeProcess
     void SetTheResourceType(VegetableTypeEnums _selectedResourceType)
     {
         AssignVegetableSpritesToModelOfficer();
@@ -21,7 +35,7 @@ public class ResourceBoxActor : MonoBehaviour
     {
         ModelOfficerSpriteBased.modelSprites = new List<Sprite>(vegetablePrefab.GetComponent<VegetableActor>().ModelOfficerSpriteBased.modelSprites);
     }
-
+    #endregion
     #region Button
 
     // [Title("Select the cam state then Invoke")]

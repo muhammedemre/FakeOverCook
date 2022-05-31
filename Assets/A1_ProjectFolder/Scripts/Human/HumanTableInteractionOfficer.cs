@@ -1,18 +1,41 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HumanTableInteractionOfficer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private HumanActor humanActor;
+    public Transform closestTablePart;
+    
+    private void OnTriggerStay2D(Collider2D other)
     {
-        
+        if (other.tag == "TableDetector")
+        {
+            Transform tableActor = other.GetComponent<RootFinderOfficer>().root;
+            CheckIfThisTableIsCloser(tableActor);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void CheckIfThisTableIsCloser(Transform currentTable)
     {
-        
+        if (closestTablePart != null)
+        {
+            float distanceToClosest = Vector2.Distance(closestTablePart.position, transform.position);
+            float distanceToCurrent = Vector2.Distance(currentTable.position, transform.position);
+            if (distanceToCurrent < distanceToClosest)
+            {
+                closestTablePart = currentTable;
+            }
+        }
+        else
+        {
+            closestTablePart = currentTable;
+        }
+    }
+
+    public void InteractWithTheTable()
+    {
+        closestTablePart.GetComponent<TablePartActor>().ExecuteTablePartProcess(humanActor);
     }
 }

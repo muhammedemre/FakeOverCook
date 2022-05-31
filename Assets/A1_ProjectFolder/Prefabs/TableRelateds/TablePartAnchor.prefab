@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3427659203589489090}
   - component: {fileID: 4061698967377309605}
+  - component: {fileID: 715932624829016987}
   m_Layer: 0
-  m_Name: PlayerDetector
-  m_TagString: PlayerDetector
+  m_Name: TableDetector
+  m_TagString: TableDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,6 +58,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &715932624829016987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275938933667986546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7fc0f518abb954c8433a1e4793cbb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 3374670541123949324}
 --- !u!1 &3374670540717367174
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +347,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5476548788125463715}
     m_Modifications:
+    - target: {fileID: 886531836010597216, guid: 4c2a63c68dd66f744804aca3ebdca20c,
+        type: 3}
+      propertyPath: tablePartActor
+      value: 
+      objectReference: {fileID: 9155372725519338633}
     - target: {fileID: 1131139588007936170, guid: 4c2a63c68dd66f744804aca3ebdca20c,
         type: 3}
       propertyPath: m_Name
@@ -423,6 +442,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3548946898513596723, guid: 7cd3422ac49a6d44192021a7b1be9155,
+        type: 3}
+      propertyPath: tablePartActor
+      value: 
+      objectReference: {fileID: 9155372725519338633}
     - target: {fileID: 4530605827493512719, guid: 7cd3422ac49a6d44192021a7b1be9155,
         type: 3}
       propertyPath: m_RootOrder
@@ -548,6 +572,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1484396488937786807, guid: 7a43fd954d7665a40b70dc2c3af1ef60,
+        type: 3}
+      propertyPath: tablePartActor
+      value: 
+      objectReference: {fileID: 9155372725519338633}
     - target: {fileID: 8211987976591882143, guid: 7a43fd954d7665a40b70dc2c3af1ef60,
         type: 3}
       propertyPath: m_Name
@@ -573,6 +602,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5476548788125463715}
     m_Modifications:
+    - target: {fileID: 6974389633385294195, guid: 3acef3682e65d8f4c8c629da876a045e,
+        type: 3}
+      propertyPath: tablePartActor
+      value: 
+      objectReference: {fileID: 9155372725519338633}
     - target: {fileID: 7976601842499750410, guid: 3acef3682e65d8f4c8c629da876a045e,
         type: 3}
       propertyPath: m_RootOrder
@@ -708,6 +742,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3248692603236188187, guid: 886e986692a56c54abf4ee590245257a,
+        type: 3}
+      propertyPath: tablePartActor
+      value: 
+      objectReference: {fileID: 9155372725519338633}
     - target: {fileID: 3916253257420227142, guid: 886e986692a56c54abf4ee590245257a,
         type: 3}
       propertyPath: m_Name
@@ -798,6 +837,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7119456887662804833, guid: 3c8ac6c423979994d9d3ce651e151a12,
+        type: 3}
+      propertyPath: tablePartActor
+      value: 
+      objectReference: {fileID: 9155372725519338633}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c8ac6c423979994d9d3ce651e151a12, type: 3}
 --- !u!4 &1101558537970342772 stripped

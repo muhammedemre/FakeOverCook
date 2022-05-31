@@ -7,18 +7,18 @@ public class GetInputOfficer : MonoBehaviour
 {
     private void Update()
     {
-        if (GameManager.instance.currentGameState == GameStates.Menu && !InputManager.instance.noInputTime)
-        {
-            MenuInput();
-        }
-        // GetInput();
+        // if (GameManager.instance.currentGameState == GameStates.Menu && !InputManager.instance.noInputTime)
+        // {
+        //     MenuInput();
+        // }
+        GetInput();
     }
 
     private void FixedUpdate()
     {
         if (GameManager.instance.currentGameState == GameStates.InGame && !InputManager.instance.noInputTime)
         {
-            InGameInput();
+            InGameMoveInput();
         }
     }
 
@@ -95,27 +95,52 @@ public class GetInputOfficer : MonoBehaviour
         }
     }
 
+    void InGameMoveInput()
+    {
+        Player1InGameMoveInput();
+        Player2InGameMoveInput();
+    }
+
     void InGameInput()
     {
         Player1InGameInput();
         Player2InGameInput();
     }
 
-    void Player1InGameInput()
+    void Player1InGameMoveInput()
     {
         HumanActor player1Actor = LevelManager.instance.LevelCreateOfficer.currentLevel.GetComponent<LevelActor>()
             .player1Actor;
         
-        player1Actor.HumanInputHandleOfficer.MenuInputInjection(Input.GetKey(KeyCode.W),
-            Input.GetKey(KeyCode.S), Input.GetKey(KeyCode.A), Input.GetKey(KeyCode.D),
-            Input.GetKeyDown(KeyCode.C));
+        player1Actor.HumanInputHandleOfficer.HumanInputInjection(Input.GetKey(KeyCode.W),
+            Input.GetKey(KeyCode.S), Input.GetKey(KeyCode.A), Input.GetKey(KeyCode.D));
+        
     }
-    void Player2InGameInput()
+    void Player2InGameMoveInput()
     {
         HumanActor player2Actor = LevelManager.instance.LevelCreateOfficer.currentLevel.GetComponent<LevelActor>()
             .player2Actor;
-        player2Actor.HumanInputHandleOfficer.MenuInputInjection(Input.GetKey(KeyCode.UpArrow),
-            Input.GetKey(KeyCode.DownArrow), Input.GetKey(KeyCode.LeftArrow), Input.GetKey(KeyCode.RightArrow),
-            Input.GetKeyDown(KeyCode.L));
+        player2Actor.HumanInputHandleOfficer.HumanInputInjection(Input.GetKey(KeyCode.UpArrow),
+            Input.GetKey(KeyCode.DownArrow), Input.GetKey(KeyCode.LeftArrow), Input.GetKey(KeyCode.RightArrow));
+        
+    }
+
+    void Player1InGameInput()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            HumanActor player1Actor = LevelManager.instance.LevelCreateOfficer.currentLevel.GetComponent<LevelActor>()
+                .player1Actor;
+            player1Actor.HumanInputHandleOfficer.Interaction();
+        }
+    }
+    void Player2InGameInput()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            HumanActor player2Actor = LevelManager.instance.LevelCreateOfficer.currentLevel.GetComponent<LevelActor>()
+                .player2Actor;
+            player2Actor.HumanInputHandleOfficer.Interaction();
+        }
     }
 }

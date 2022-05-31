@@ -6,8 +6,13 @@ public class HumanInputHandleOfficer : MonoBehaviour
 {
     [SerializeField] private HumanActor HumanActor;
     
-    public void MenuInputInjection(bool moveUp, bool moveDown, bool moveLeft, bool moveRight, bool Interaction)
+    public void HumanInputInjection(bool moveUp, bool moveDown, bool moveLeft, bool moveRight)
     {
         HumanActor.HumanMoveOfficer.Move(moveUp, moveDown, moveLeft, moveRight);
+    }
+
+    public void Interaction()
+    {
+        HumanActor.HumanTableInteractionOfficer.InteractWithTheTable();
     }
 }

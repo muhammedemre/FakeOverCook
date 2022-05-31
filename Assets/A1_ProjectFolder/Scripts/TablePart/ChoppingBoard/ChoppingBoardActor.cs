@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class ChoppingBoardActor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private TablePartActor tablePartActor;
+    public void AssignTheFunctionality()
     {
-        
+        tablePartActor.TableFunction += ChoppingBoardTableInteractionProcess;
     }
 
-    // Update is called once per frame
-    void Update()
+    void ChoppingBoardTableInteractionProcess(HumanActor humanActor)
     {
-        
+        print("ChoppingBoardTableInteractionProcess");
     }
 }
