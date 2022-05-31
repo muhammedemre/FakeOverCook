@@ -10,7 +10,7 @@ public class PlateSpawnerActor : MonoBehaviour
         tablePartActor.TableFunction += PlateSpawnerTableInteractionProcess;
     }
 
-    void PlateSpawnerTableInteractionProcess(HumanActor humanActor)
+    void PlateSpawnerTableInteractionProcess(HumanActor humanActor, bool chopping)
     {
         print("PlateSpawnerTableInteractionProcess");
     }

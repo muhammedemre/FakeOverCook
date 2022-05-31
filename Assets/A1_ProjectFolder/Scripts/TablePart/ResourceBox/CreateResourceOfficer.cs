@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class CreateResourceOfficer : MonoBehaviour
 {
-    private GameObject lastCreatedResource;
     public void CreateTheResource(GameObject vegetablePrefab, VegetableTypeEnums vegetableType, HumanActor player)
     {
-        Transform tempResource = Instantiate(vegetablePrefab).transform;
-        tempResource.GetComponent<VegetableActor>().SetTheVegetableType(vegetableType);
-        StartCoroutine(player.HumanResourceInteractionOfficer.GrabAResource(tempResource));
+        if (player.HumanResourceInteractionOfficer.resourceList.Count < 2)
+        {
+            Transform tempResource = Instantiate(vegetablePrefab).transform;
+            tempResource.GetComponent<VegetableActor>().SetTheVegetableType(vegetableType);
+            StartCoroutine(player.HumanResourceInteractionOfficer.GrabAResource(tempResource));
+        }
     }
 }

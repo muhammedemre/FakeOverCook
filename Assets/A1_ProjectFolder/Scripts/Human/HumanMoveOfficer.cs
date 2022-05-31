@@ -55,15 +55,15 @@ public class HumanMoveOfficer : SerializedMonoBehaviour
 
         if (rigidBody.velocity.magnitude > facingTreshold)
         {
-            CalculateTheFacingAngle();
+            CalculateTheFacingAngle(transform.position);
         }
 
         
     }
 
-    void CalculateTheFacingAngle()
+    public void CalculateTheFacingAngle(Vector3 targetPosition)
     {
-        Vector3 diffPosition = transform.position - previousPos;
+        Vector3 diffPosition = targetPosition - previousPos;
         float angle = Mathf.Atan2(diffPosition.y, diffPosition.x) * Mathf.Rad2Deg;
         
         Transform modelAnchor = HumanActor.HumanAnimationOfficer.humanModelAnchor;

@@ -11,8 +11,15 @@ public class HumanInputHandleOfficer : MonoBehaviour
         HumanActor.HumanMoveOfficer.Move(moveUp, moveDown, moveLeft, moveRight);
     }
 
-    public void Interaction()
+    public void Interaction(bool chopping)
     {
-        HumanActor.HumanTableInteractionOfficer.InteractWithTheTable();
+        if (!chopping)
+        {
+            HumanActor.HumanTableInteractionOfficer.InteractWithTheTable();
+        }
+        else
+        {
+            HumanActor.HumanTableInteractionOfficer.Chopping();
+        }
     }
 }

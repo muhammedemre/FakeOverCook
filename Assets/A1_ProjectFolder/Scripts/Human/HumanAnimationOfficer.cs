@@ -25,7 +25,13 @@ public class HumanAnimationOfficer : MonoBehaviour
     public void PlayLeaveAnItem()
     {
         animator.SetInteger("State", 3);
+        StartCoroutine(animDelayer(0.5f, 0));
     }
 
-    
+
+    IEnumerator animDelayer(float delayTime, int state)
+    {
+        yield return new WaitForSeconds(delayTime);
+        animator.SetInteger("State", state);
+    }
 }

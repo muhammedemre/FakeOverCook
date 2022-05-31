@@ -17,7 +17,7 @@ public class ResourceBoxActor : MonoBehaviour
         tablePartActor.TableFunction += ResourceBoxTableInteractionProcess;
     }
 
-    void ResourceBoxTableInteractionProcess(HumanActor humanActor)
+    void ResourceBoxTableInteractionProcess(HumanActor humanActor, bool chopping)
     {
         print("ResourceBoxTableInteractionProcess");
         CreateResourceOfficer.CreateTheResource(vegetablePrefab, selectedResourceType, humanActor);

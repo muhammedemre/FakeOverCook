@@ -10,8 +10,18 @@ public class GarbageActor : MonoBehaviour
         tablePartActor.TableFunction += GarbageTableInteractionProcess;
     }
 
-    void GarbageTableInteractionProcess(HumanActor humanActor)
+    void GarbageTableInteractionProcess(HumanActor humanActor, bool chopping)
     {
         print("GarbageTableInteractionProcess");
+        DestroyTheResource(humanActor);
+    }
+
+    void DestroyTheResource(HumanActor humanActor)
+    {
+        Transform resourceToDestroy = humanActor.HumanResourceInteractionOfficer.LeaveAnItem();
+        if (resourceToDestroy != null)
+        {
+            Destroy(resourceToDestroy.gameObject);
+        }
     }
 }

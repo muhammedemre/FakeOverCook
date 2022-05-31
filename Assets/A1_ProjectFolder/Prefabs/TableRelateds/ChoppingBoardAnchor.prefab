@@ -209,3 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37354c075257a640a513d6ecb6e8d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tablePartActor: {fileID: 0}
+  choppingDuration: 3
+  saladPrefab: {fileID: 6992708273375026476, guid: 28f8395d97466c942967fb6f36e79ac7,
+    type: 3}
+  readySalad: {fileID: 0}

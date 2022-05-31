@@ -10,7 +10,7 @@ public class ServiceTableActor : MonoBehaviour
         tablePartActor.TableFunction += ServiceTableInteractionProcess;
     }
 
-    void ServiceTableInteractionProcess(HumanActor humanActor)
+    void ServiceTableInteractionProcess(HumanActor humanActor, bool chopping)
     {
         print("ServiceTableInteractionProcess");
     }

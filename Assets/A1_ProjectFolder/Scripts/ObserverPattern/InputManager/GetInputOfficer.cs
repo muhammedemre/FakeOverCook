@@ -127,20 +127,28 @@ public class GetInputOfficer : MonoBehaviour
 
     void Player1InGameInput()
     {
+        HumanActor player1Actor = LevelManager.instance.LevelCreateOfficer.currentLevel.GetComponent<LevelActor>()
+            .player1Actor;
         if (Input.GetKeyDown(KeyCode.C))
         {
-            HumanActor player1Actor = LevelManager.instance.LevelCreateOfficer.currentLevel.GetComponent<LevelActor>()
-                .player1Actor;
-            player1Actor.HumanInputHandleOfficer.Interaction();
+            player1Actor.HumanInputHandleOfficer.Interaction(false);
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            player1Actor.HumanInputHandleOfficer.Interaction(true);
         }
     }
     void Player2InGameInput()
     {
+        HumanActor player2Actor = LevelManager.instance.LevelCreateOfficer.currentLevel.GetComponent<LevelActor>()
+            .player2Actor;
         if (Input.GetKeyDown(KeyCode.L))
         {
-            HumanActor player2Actor = LevelManager.instance.LevelCreateOfficer.currentLevel.GetComponent<LevelActor>()
-                .player2Actor;
-            player2Actor.HumanInputHandleOfficer.Interaction();
+            player2Actor.HumanInputHandleOfficer.Interaction(false);
+        }
+        else if (Input.GetKeyDown(KeyCode.K))
+        {
+            player2Actor.HumanInputHandleOfficer.Interaction(true);
         }
     }
 }

@@ -10,7 +10,7 @@ public class NormalTableActor : MonoBehaviour
         tablePartActor.TableFunction += NormalTableInteractionProcess;
     }
 
-    void NormalTableInteractionProcess(HumanActor humanActor)
+    void NormalTableInteractionProcess(HumanActor humanActor, bool chopping)
     {
         print("NormalTableInteractionProcess");
     }

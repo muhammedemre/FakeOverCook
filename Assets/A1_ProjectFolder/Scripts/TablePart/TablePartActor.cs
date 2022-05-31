@@ -11,7 +11,7 @@ public class TablePartActor : MonoBehaviour
         NormalTable, PlateSpawner, Garbage, ServiceTable, ChoppingBoard, ResourceBox
     }
 
-    public delegate void TableFunctionDel(HumanActor humanActor);
+    public delegate void TableFunctionDel(HumanActor humanActor, bool chopping);
 
     public event TableFunctionDel TableFunction;
     
@@ -56,9 +56,9 @@ public class TablePartActor : MonoBehaviour
         }
     }
 
-    public void ExecuteTablePartProcess(HumanActor humanActor)
+    public void ExecuteTablePartProcess(HumanActor humanActor, bool chopping)
     {
-        TableFunction(humanActor);
+        TableFunction(humanActor, chopping);
     }
 
 

@@ -17,6 +17,11 @@ public class HumanTableInteractionOfficer : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        closestTablePart = null;
+    }
+
     void CheckIfThisTableIsCloser(Transform currentTable)
     {
         if (closestTablePart != null)
@@ -36,6 +41,22 @@ public class HumanTableInteractionOfficer : MonoBehaviour
 
     public void InteractWithTheTable()
     {
-        closestTablePart.GetComponent<TablePartActor>().ExecuteTablePartProcess(humanActor);
+        if (closestTablePart == null)
+        {
+            return;
+        }
+        closestTablePart.GetComponent<TablePartActor>().ExecuteTablePartProcess(humanActor, false);
+    }
+
+    public void Chopping()
+    {
+        if (closestTablePart == null)
+        {
+            return;
+        }
+        if (closestTablePart.GetComponent<TablePartActor>().currentTablePartType == TablePartActor.TablePartEnum.ChoppingBoard)
+        {
+            closestTablePart.GetComponent<TablePartActor>().ExecuteTablePartProcess(humanActor, true);
+        }
     }
 }
