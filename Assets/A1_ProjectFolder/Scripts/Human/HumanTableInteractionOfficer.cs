@@ -20,6 +20,7 @@ public class HumanTableInteractionOfficer : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         closestTablePart = null;
+        // closestTablePart.GetComponent<TablePartActor>().Highlight(false);
     }
 
     void CheckIfThisTableIsCloser(Transform currentTable)
@@ -37,6 +38,7 @@ public class HumanTableInteractionOfficer : MonoBehaviour
         {
             closestTablePart = currentTable;
         }
+        // closestTablePart.GetComponent<TablePartActor>().Highlight(true);
     }
 
     public void InteractWithTheTable()

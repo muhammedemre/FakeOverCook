@@ -18,6 +18,7 @@ public class TablePartActor : MonoBehaviour
     [SerializeField] private ModelOfficerTransformBased categoryModelsOfficer;
     public TablePartEnum currentTablePartType;
     [SerializeField] Transform selectedCategoryTransform;
+    [SerializeField] private GameObject highlight;
 
     private void Start()
     {
@@ -61,6 +62,10 @@ public class TablePartActor : MonoBehaviour
         TableFunction(humanActor, chopping);
     }
 
+    public void Highlight(bool state)
+    {
+        highlight.SetActive(state);
+    }
 
     #region Button
 
