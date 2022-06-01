@@ -16,7 +16,7 @@ public class GetInputOfficer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameManager.instance.currentGameState == GameStates.InGame && !InputManager.instance.noInputTime)
+        if (GameManager.instance.currentGameState == GameStates.InGame)
         {
             InGameMoveInput();
         }
@@ -111,18 +111,22 @@ public class GetInputOfficer : MonoBehaviour
     {
         HumanActor player1Actor = LevelManager.instance.LevelCreateOfficer.currentLevel.GetComponent<LevelActor>()
             .player1Actor;
-        
-        player1Actor.HumanInputHandleOfficer.HumanInputInjection(Input.GetKey(KeyCode.W),
-            Input.GetKey(KeyCode.S), Input.GetKey(KeyCode.A), Input.GetKey(KeyCode.D));
-        
+
+        if (player1Actor.HumanMoveOfficer.ableToMove)
+        {
+            player1Actor.HumanInputHandleOfficer.HumanInputInjection(Input.GetKey(KeyCode.W),
+                Input.GetKey(KeyCode.S), Input.GetKey(KeyCode.A), Input.GetKey(KeyCode.D));
+        }
     }
     void Player2InGameMoveInput()
     {
         HumanActor player2Actor = LevelManager.instance.LevelCreateOfficer.currentLevel.GetComponent<LevelActor>()
             .player2Actor;
-        player2Actor.HumanInputHandleOfficer.HumanInputInjection(Input.GetKey(KeyCode.UpArrow),
-            Input.GetKey(KeyCode.DownArrow), Input.GetKey(KeyCode.LeftArrow), Input.GetKey(KeyCode.RightArrow));
-        
+        if (player2Actor.HumanMoveOfficer.ableToMove)
+        {
+            player2Actor.HumanInputHandleOfficer.HumanInputInjection(Input.GetKey(KeyCode.UpArrow),
+                Input.GetKey(KeyCode.DownArrow), Input.GetKey(KeyCode.LeftArrow), Input.GetKey(KeyCode.RightArrow));
+        }
     }
 
     void Player1InGameInput()

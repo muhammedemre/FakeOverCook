@@ -39,12 +39,12 @@ public class ChoppingBoardActor : MonoBehaviour
     {
         humanActor.HumanMoveOfficer.CalculateTheFacingAngle(transform.position);
         humanActor.HumanAnimationOfficer.PlayHandWorking();
-        InputManager.instance.noInputTime = true;
+        humanActor.HumanMoveOfficer.ableToMove = false;
         yield return new WaitForSeconds(choppingDuration);
         Transform tempSalad = Instantiate(saladPrefab, transform.position, Quaternion.identity, transform).transform;
         ImportingVegetables(tempSalad.GetComponent<SaladActor>(), humanActor);
         readySalad = tempSalad.gameObject;
-        InputManager.instance.noInputTime = false;
+        humanActor.HumanMoveOfficer.ableToMove = true;
         humanActor.HumanAnimationOfficer.PlayHumanIdle();
     }
 

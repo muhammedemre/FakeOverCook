@@ -16,6 +16,8 @@ public class HumanMoveOfficer : SerializedMonoBehaviour
     
     Vector3 refRotation = Vector3.zero;
     private Vector3 previousPos;
+    
+    public bool ableToMove = true;
 
     private void Start()
     {
