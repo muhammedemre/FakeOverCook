@@ -5,8 +5,8 @@ using UnityEngine;
 public class ServiceTableActor : MonoBehaviour
 {
     [SerializeField] private TablePartActor tablePartActor;
-    [SerializeField] private SaladCheckOfficer saladCheckOfficer;
-    [SerializeField] private RequestedSaladOfficer requestedSaladOfficer;
+    public SaladCheckOfficer saladCheckOfficer;
+    public RequestedSaladOfficer requestedSaladOfficer;
     public void AssignTheFunctionality()
     {
         tablePartActor.TableFunction += ServiceTableInteractionProcess;
@@ -14,6 +14,23 @@ public class ServiceTableActor : MonoBehaviour
 
     void ServiceTableInteractionProcess(HumanActor humanActor, bool chopping)
     {
-        print("ServiceTableInteractionProcess");
+        // print("ServiceTableInteractionProcess");
+        AcceptTheSalad(humanActor);
+    }
+
+    void AcceptTheSalad(HumanActor humanActor)
+    {
+        if (humanActor.HumanResourceInteractionOfficer.carryingPlate == null)
+        {
+            return;
+        }
+
+        GameObject saladPlate = humanActor.HumanResourceInteractionOfficer.carryingPlate.gameObject;
+        List<VegetableTypeEnums> providedCombination = saladPlate.GetComponent<SaladActor>().includingVegetables;
+        List<VegetableTypeEnums> requestedCombination = requestedSaladOfficer.requestedVegetables;
+        
+        saladCheckOfficer.CheckMatchOfVegetables(humanActor, requestedCombination, providedCombination);
+        Destroy(saladPlate, 0.2f);
+        humanActor.HumanAnimationOfficer.PlayLeaveAnItem();
     }
 }

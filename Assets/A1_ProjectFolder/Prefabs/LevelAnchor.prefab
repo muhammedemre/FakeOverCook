@@ -928,6 +928,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.26056466
       objectReference: {fileID: 0}
+    - target: {fileID: 2027124666647842704, guid: 9fa57760f95282043b19bd2840b9c6ad,
+        type: 3}
+      propertyPath: player
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2027124666647842705, guid: 9fa57760f95282043b19bd2840b9c6ad,
         type: 3}
       propertyPath: m_RootOrder
@@ -1950,6 +1955,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TablePartsTop1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209406174249926165, guid: ac7edaa4ebedfec4a8ce35309f87661e,
+        type: 3}
+      propertyPath: frequencyToChangeRequest
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6196662648940446242, guid: ac7edaa4ebedfec4a8ce35309f87661e,
         type: 3}

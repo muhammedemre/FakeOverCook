@@ -5,7 +5,7 @@ public class UIManager : Manager
 {
     public static UIManager instance;
     public UITaskOfficers UITaskOfficers;
-    public GameObject menu;
+    public GameObject menu, inGameScreen;
     private void Awake()
     {
         StaticCheck();

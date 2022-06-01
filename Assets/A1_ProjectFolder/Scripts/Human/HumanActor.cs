@@ -10,4 +10,6 @@ public class HumanActor : MonoBehaviour
     public HumanColoringOfficer HumanColoringOfficer;
     public HumanInputHandleOfficer HumanInputHandleOfficer;
     public HumanAnimationOfficer HumanAnimationOfficer;
+
+    public PlayerEnums player;
 }

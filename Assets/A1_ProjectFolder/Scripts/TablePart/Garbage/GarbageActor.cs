@@ -18,6 +18,7 @@ public class GarbageActor : MonoBehaviour
 
     void DestroyTheResource(HumanActor humanActor)
     {
+        PlayerManager.instance.playerPointsOfficer.PlayerPointAddition(-2, humanActor.player);
         Transform resourceToDestroy = humanActor.HumanResourceInteractionOfficer.LeaveAnItem();
         if (resourceToDestroy != null)
         {

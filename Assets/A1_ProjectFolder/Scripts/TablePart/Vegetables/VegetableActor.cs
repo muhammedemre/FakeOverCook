@@ -9,7 +9,7 @@ public class VegetableActor : MonoBehaviour
     [SerializeField] private Color processedColor;
     [SerializeField] private float colorChangeDuration;
     public VegetableTypeEnums currentVegetableType;
-    public bool isProcessed = false;
+    public bool toService = false;
 
     public void SetTheVegetableType(VegetableTypeEnums selectedVegetableType)
     {

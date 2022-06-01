@@ -19,7 +19,7 @@ public class ResourceBoxActor : MonoBehaviour
 
     void ResourceBoxTableInteractionProcess(HumanActor humanActor, bool chopping)
     {
-        print("ResourceBoxTableInteractionProcess");
+        // print("ResourceBoxTableInteractionProcess");
         CreateResourceOfficer.CreateTheResource(vegetablePrefab, selectedResourceType, humanActor);
     }
     

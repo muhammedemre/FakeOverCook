@@ -2,6 +2,8 @@
 {
     public static PlayerManager instance;
 
+    public PlayerPointsOfficer playerPointsOfficer;
+    
     private void Awake()
     {
         StaticCheck();
@@ -14,5 +16,10 @@
             Destroy(this);
         }
         instance = this;
+    }
+
+    public override void PostLevelInstantiateProcess()
+    {
+        playerPointsOfficer.PrepareValues();
     }
 }

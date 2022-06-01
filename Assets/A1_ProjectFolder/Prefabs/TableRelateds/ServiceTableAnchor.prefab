@@ -1260,8 +1260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tablePartActor: {fileID: 0}
-  saladCheckOfficer: {fileID: 0}
-  requestedSaladOfficer: {fileID: 0}
+  saladCheckOfficer: {fileID: 5416084795167915816}
+  requestedSaladOfficer: {fileID: 7092131015477757090}
 --- !u!114 &5416084795167915816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1274,6 +1274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b37b3a65c3f6d8418d08542b8d4e29d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serviceTableActor: {fileID: 7119456887662804833}
 --- !u!114 &7092131015477757090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1286,14 +1287,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204becb02cd77914ca6805dc9dbcda20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequencyToChangeRequest: 5
-  randomRate: 0.2
+  frequencyToChangeRequest: 15
+  randomRate: 0.5
   doubleVegetableRate: 60
   requestedSaladCombination:
   - {fileID: 5451220553603896836}
   - {fileID: 2150669566721990215}
+  requestedVegetables: 
   vegetableVarietyList: 000000000100000006000000
   saladDeadlineBar: {fileID: 8104452386282432541}
+  satisfiedCustomer: 0
+  vegetable1: {fileID: 5451220553603896835}
+  vegetable2: {fileID: 2150669566721990208}
+  requestedVegetablesNews: 
 --- !u!1 &4055616325674985885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,7 +1517,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 50b075e17c212fc47a24d608bd04a5a6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1678,6 +1684,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc9eb155e1471fa4a83c21fa218203f1, type: 3}
+--- !u!1 &2150669566721990208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3864887014390346530, guid: cc9eb155e1471fa4a83c21fa218203f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2916750158172826978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2150669566721990214 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3864887014390346532, guid: cc9eb155e1471fa4a83c21fa218203f1,
@@ -1690,7 +1702,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2916750158172826978}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2150669566721990208}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61d9023e0b853ae4784d91d01c5d8ea1, type: 3}
@@ -1771,6 +1783,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc9eb155e1471fa4a83c21fa218203f1, type: 3}
+--- !u!1 &5451220553603896835 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3864887014390346530, guid: cc9eb155e1471fa4a83c21fa218203f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 9080512993638212897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5451220553603896837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3864887014390346532, guid: cc9eb155e1471fa4a83c21fa218203f1,
@@ -1783,7 +1801,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 9080512993638212897}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5451220553603896835}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61d9023e0b853ae4784d91d01c5d8ea1, type: 3}

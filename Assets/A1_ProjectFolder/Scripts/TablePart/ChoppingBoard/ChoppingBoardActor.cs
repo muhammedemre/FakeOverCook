@@ -15,7 +15,7 @@ public class ChoppingBoardActor : MonoBehaviour
 
     void ChoppingBoardTableInteractionProcess(HumanActor humanActor, bool chopping)
     {
-        print("ChoppingBoardTableInteractionProcess");
+        // print("ChoppingBoardTableInteractionProcess");
         ChoppingTableDecision(humanActor);
     }
 

@@ -8,15 +8,19 @@ public class RequestedSaladOfficer : MonoBehaviour
 {
 
     [SerializeField] private float frequencyToChangeRequest, randomRate, doubleVegetableRate;
-    [SerializeField] private List<VegetableActor> requestedSaladCombination = new List<VegetableActor>();
+    public List<VegetableTypeEnums> requestedVegetables = new List<VegetableTypeEnums>();
     [SerializeField] private List<VegetableTypeEnums> vegetableVarietyList = new List<VegetableTypeEnums>();
     [SerializeField] private Transform saladDeadlineBar;
     
     private float nextCombinationAssign, currentTotalDuration;
 
+    [SerializeField] private GameObject vegetable1, vegetable2;
+
     private void Start()
     {
-        nextCombinationAssign = Time.time + frequencyToChangeRequest;
+        currentTotalDuration = FrequencyAddition();
+        nextCombinationAssign = Time.time + currentTotalDuration;
+        ChangeSaladRequest("Start");
     }
 
     void Update()
@@ -28,13 +32,18 @@ public class RequestedSaladOfficer : MonoBehaviour
     {
         if (Time.time > nextCombinationAssign)
         {
-            float randomFrequencyAddition = UnityEngine.Random.Range(-frequencyToChangeRequest * randomRate, frequencyToChangeRequest * randomRate);
-            float calculatedFrequency = frequencyToChangeRequest + randomFrequencyAddition;
-            currentTotalDuration = calculatedFrequency;
-            nextCombinationAssign = Time.time + calculatedFrequency;
-            ChangeSaladRequest();
+            currentTotalDuration = FrequencyAddition();
+            nextCombinationAssign = Time.time + currentTotalDuration;
+            FailedSaladRequest();
         }
         CalculatesaladDeadlineBar(currentTotalDuration);
+    }
+
+    float FrequencyAddition()
+    {
+        float randomFrequencyAddition = UnityEngine.Random.Range(-frequencyToChangeRequest * randomRate, frequencyToChangeRequest * randomRate);
+        float calculatedFrequency = frequencyToChangeRequest + randomFrequencyAddition;
+        return calculatedFrequency;
     }
 
     void CalculatesaladDeadlineBar(float totalDuration)
@@ -55,26 +64,58 @@ public class RequestedSaladOfficer : MonoBehaviour
         saladDeadlineBar.localScale = new Vector3(durationRatio, saladDeadlineBar.localScale.y, saladDeadlineBar.localScale.z);
     }
 
-    void ChangeSaladRequest()
+    void ChangeSaladRequest(string nereden)
     {
-        int doubleOrSingleRate = UnityEngine.Random.Range(0, 100);
-        int vegetableAmount = 0;
-        if (doubleOrSingleRate > doubleVegetableRate)
+        print("nereden : "+ nereden);
+        requestedVegetables = new List<VegetableTypeEnums>();
+        if (IsDouble(doubleVegetableRate))
         {
-            vegetableAmount = 2;
-            requestedSaladCombination[1].ModelOfficerSpriteBased.targetSpriteRenderer.enabled = true;
+            ActivateVegetable(vegetable1.GetComponent<VegetableActor>());
+            ActivateVegetable(vegetable2.GetComponent<VegetableActor>());
         }
         else
         {
-            vegetableAmount = 1;
-            requestedSaladCombination[1].ModelOfficerSpriteBased.targetSpriteRenderer.enabled = false;
-        }
-
-        for (int i = 0; i < vegetableAmount; i++)
-        {
-            int randomForVegetableType = UnityEngine.Random.Range(0, vegetableVarietyList.Count);
-            VegetableTypeEnums randomlySelectedVegetableType = vegetableVarietyList[randomForVegetableType];
-            requestedSaladCombination[i].SetTheVegetableType(randomlySelectedVegetableType);
+            ActivateVegetable(vegetable1.GetComponent<VegetableActor>());
+            DeactivateVegetable(vegetable2.GetComponent<VegetableActor>());
         }
     }
+
+    void ActivateVegetable(VegetableActor vegetable)
+    {
+        vegetable.ModelOfficerSpriteBased.targetSpriteRenderer.gameObject.SetActive(true);
+        int randomForVegetableType = UnityEngine.Random.Range(0, vegetableVarietyList.Count);
+        VegetableTypeEnums randomlySelectedVegetableType = vegetableVarietyList[randomForVegetableType];
+        vegetable.SetTheVegetableType(randomlySelectedVegetableType);
+        requestedVegetables.Add(randomlySelectedVegetableType);
+    }
+
+    void DeactivateVegetable(VegetableActor vegetable)
+    {
+        vegetable.ModelOfficerSpriteBased.targetSpriteRenderer.gameObject.SetActive(false);
+    }
+
+    bool IsDouble(float doubleRate)
+    {
+        int rate = UnityEngine.Random.Range(0, 100);
+        return ((rate > doubleRate) ? false : true);
+    }
+    
+
+    void FailedSaladRequest()
+    {
+        // print("FAILED");
+        currentTotalDuration = FrequencyAddition();
+        nextCombinationAssign = Time.time + currentTotalDuration;
+        ChangeSaladRequest("FailedSaladRequest");
+    }
+
+    public void SuccessfulSaladRequest(HumanActor humanActor)
+    {
+        print("SUCCEESSS");
+        PlayerManager.instance.playerPointsOfficer.PlayerPointAddition(10, humanActor.player);
+        currentTotalDuration = FrequencyAddition();
+        nextCombinationAssign = Time.time + currentTotalDuration;
+        ChangeSaladRequest("SuccessfulSaladRequest");
+    }
+    
 }
